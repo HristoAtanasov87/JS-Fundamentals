@@ -64,14 +64,9 @@ function solve(input) {
         if (toSort.length > 0) {
 
             toSort.sort(([townA, objA], [townB, objB]) => {
-                objA = Object.entries(objA);
-                let [keyA, goldA] = objA[1];
 
-                objB = Object.entries(objB);
-                let [keyB, goldB] = objB[1];
-
-                if (goldA !== goldB) {
-                    return goldB - goldA;
+                if (objA.gold !== objB.gold) {
+                    return objB.gold - objA.gold;
                 } else {
                     return townA.localeCompare(townB);
                 }
