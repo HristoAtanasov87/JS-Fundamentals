@@ -21,6 +21,7 @@ function solve(input) {
                 text = text.replace(substring, replacement);
             }
         }
+
         [action, ...parameters] = input.shift().split("|")
 
     }
